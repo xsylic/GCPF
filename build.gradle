@@ -1,0 +1,23 @@
+plugins {
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+    id 'java'
+}
+
+group 'kt.xsylic.gcpf'
+version '0.1'
+
+repositories {
+    mavenCentral()
+}
+
+shadowJar {
+    manifest {
+        attributes(
+                'Main-Class': 'kt.xsylic.gcpf.GCPF'
+        )
+    }
+}
+
+dependencies {
+    implementation 'commons-cli:commons-cli:1.6.0'
+}
